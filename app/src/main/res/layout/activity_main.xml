@@ -4,14 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.android.healthcheck.MainActivity"
     android:orientation="vertical"
-    >
+    tools:context="com.example.android.healthcheck.MainActivity">
+
 
     <TextView
-        android:layout_width="368dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
+        android:layout_marginTop="16dp"
         android:gravity="center"
         android:text="Health Check"
         android:textSize="24sp"
@@ -20,46 +21,59 @@
 
         />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:onClick="question"
+        android:text="Begin / Reset"
+
+        />
+
     <TextView
-        android:layout_width="0dp"
+        android:id="@+id/q_present"
+        android:layout_width="match_parent"
         android:layout_height="100dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:background="#EEEEEE"
+        android:text="Text Here"
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="0dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="16dp"
         android:orientation="horizontal"
         tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="0dp"
-        >
+        tools:layout_editor_absoluteY="0dp">
 
         <Button
             android:layout_width="120dp"
             android:layout_height="wrap_content"
-            android:text="YES"
-            android:textSize="16sp"
+            android:onClick="always"
+            android:text="Always"
             android:textColor="#000000"
-
-            />
+            android:textSize="16sp" />
 
         <Button
             android:layout_width="120dp"
             android:layout_height="wrap_content"
+            android:onClick="sometimes"
             android:text="Sometimes"
-            android:textSize="16sp"
             android:textColor="#000000"
-            />
+            android:textSize="16sp" />
 
         <Button
             android:layout_width="120dp"
             android:layout_height="wrap_content"
-            android:text="No"
-            android:textSize="16sp"
+            android:onClick="never"
+            android:text="Never"
             android:textColor="#000000"
-            />
-
-
+            android:textSize="16sp" />
 
 
     </LinearLayout>
@@ -67,15 +81,28 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Score"
         android:gravity="center"
-        />
+        android:text="Score:" />
+
+    <TextView
+        android:id="@+id/score_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="" />
+
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="10"
-        android:gravity="center"/>
+        android:gravity="center"
+        android:text="Question Number:" />
 
+    <TextView
+        android:id="@+id/qNum_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="" />
 
 </LinearLayout>
